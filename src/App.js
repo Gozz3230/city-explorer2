@@ -1,7 +1,7 @@
 import React from 'react';
 import 'bootstrap/dist/css/bootstrap.min.css';
 import Map from './Map';
-// import Error from './Error';
+import Error from './Error';
 import axios from 'axios';
 import Button from 'react-bootstrap/Button';
 import Form from 'react-bootstrap/Form';
@@ -52,21 +52,18 @@ class App extends React.Component {
     return (
       <>
         <form onSubmit={this.handleGetMapsData}>
-          <label htmlFor=""> Enter a City Name:
+          <label htmlFor=""> Enter a City Name: 
             <input type="text" onChange={this.handleCityInput}/>
           </label>
           <button onClick={this.handleGetMapsData}type="submit">Explore!</button>
         </form>
-        {this.state.mapsData && <Map mapsData={this.state.mapsData} />
-        }
-
-        {
-          this.state.error
-          ? <p>{this.state.errorMsg}</p>
-          : <p>{this.state.locationData.display_name}</p>
-        }
+        {this.state.error ? (
+          <Error errorMessage={this.state.errorMessage} />
+        ) : (
+        this.state.mapsData && <Map mapsData={this.state.mapsData} />
+        )}
       </>
-    )
+    );
   }
 }
 
