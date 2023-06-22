@@ -1,0 +1,11 @@
+.card {
+    width: 60%;
+    margin-left: auto;
+    margin-top: 2%;
+    margin-bottom: 2%;
+    margin-right: auto;
+    font-family: 'Franklin Gothic Medium', 'Arial Narrow', Arial, sans-serif;
+    background-color: rgba(64, 125, 136, 0.5);
+    color: white;
+}
+
