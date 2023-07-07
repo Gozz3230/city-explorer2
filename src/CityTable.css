@@ -1,0 +1,22 @@
+.CityTable {
+    color: #333333;
+    background-color: #444444;
+    border: none;
+}
+
+.CityTable th {
+    background-color: #f2f2f2;
+    font-weight: bold;
+}
+
+.CityTable td {
+    background-color: #ffffff;
+}
+
+.CityTable tr:nth-child(even) {
+    background-color: #f9f9f9;
+}
+
+.CityTable tr:hover {
+    background-color: #e6e6e6;
+}
